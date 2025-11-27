@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business - Koch Graz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-md py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i data-lucide="chef-hat" class="text-gold-500 w-8 h-8"></i>
+                <span class="text-xl font-serif font-bold text-slate-900">Koch<span class="text-gold-500">.</span>Graz</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-medium hover:text-gold-600 transition">Home</a>
+                <a href="business.html" class="font-bold text-gold-600 border-b-2 border-gold-600">Business</a>
+                <a href="private.html" class="font-medium hover:text-gold-600 transition">Privat</a>
+                <a href="about.html" class="font-medium hover:text-gold-600 transition">Über mich</a>
+                <a href="manul-ki.html" class="flex items-center gap-2 bg-sage-100 text-sage-600 px-4 py-2 rounded-full font-bold text-sm hover:bg-sage-600 hover:text-white transition">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Manul KI
+                </a>
+                <a href="contact.html" class="bg-gold-500 text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-gold-600 transition">Kontakt</a>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden text-slate-900 p-2"><i data-lucide="menu" class="w-8 h-8"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl flex-col items-center py-8 space-y-6 md:hidden border-t border-gray-100">
+            <a href="index.html" class="text-xl font-serif font-bold text-slate-800">Home</a>
+            <a href="business.html" class="text-xl font-serif font-bold text-gold-600">Business</a>
+            <a href="private.html" class="text-xl font-serif font-bold text-slate-800">Privat</a>
+            <a href="about.html" class="text-xl font-serif font-bold text-slate-800">Über mich</a>
+            <a href="manul-ki.html" class="text-xl font-bold text-sage-600 flex items-center gap-2"><i data-lucide="sparkles"></i> Manul KI</a>
+            <a href="contact.html" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-20 px-4 max-w-7xl mx-auto w-full flex-grow">
+        <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-16 text-center mb-16 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gold-500 rounded-full blur-3xl opacity-20 -mr-20 -mt-20"></div>
+            <div class="relative z-10 animate-fade-in-up">
+                <span class="text-gold-500 font-bold tracking-widest uppercase text-sm mb-4 block">B2B Services</span>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Business & Catering</h1>
+                <p class="text-slate-300 max-w-2xl mx-auto text-lg mb-8 leading-relaxed">Professionelle Unterstützung für Gastronomie und Firmen in Graz. Mietkoch, Event-Catering und Beratung.</p>
+                <a href="contact.html" class="inline-block bg-gold-500 text-white px-8 py-3 rounded-full font-bold hover:bg-gold-600 transition shadow-lg transform hover:-translate-y-1">Verfügbarkeit prüfen</a>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:-translate-y-1 transition duration-300 group">
+                <div class="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-50 transition">
+                    <i data-lucide="clock" class="text-gold-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Mietkoch Service</h3>
+                <p class="text-slate-600 leading-relaxed">Krankheitsausfälle oder Spitzen? Ich integriere mich nahtlos in Ihr Team. Abrechnung fair nach Stunden.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:-translate-y-1 transition duration-300 group">
+                <div class="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-50 transition">
+                    <i data-lucide="chef-hat" class="text-gold-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Event Catering</h3>
+                <p class="text-slate-600 leading-relaxed">Hochwertiges Catering für Firmenfeiern, Seminare oder Kundenempfänge. Von Fingerfood bis Gala.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:-translate-y-1 transition duration-300 group">
+                <div class="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-50 transition">
+                    <i data-lucide="trending-up" class="text-gold-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Consulting</h3>
+                <p class="text-slate-600 leading-relaxed">Optimierung von Arbeitsabläufen, Kalkulation oder Neuentwicklung von Speisekarten.</p>
+            </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-12 items-center bg-white p-8 rounded-3xl border border-slate-100">
+             <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1554&q=80" class="rounded-2xl shadow-xl w-full object-cover h-[400px]" alt="Profiküche">
+             </div>
+             <div class="md:w-1/2">
+                <h2 class="text-3xl font-serif font-bold text-slate-900 mb-6">Warum mich buchen?</h2>
+                <ul class="space-y-4">
+                    <li class="flex gap-4 text-slate-700 items-start">
+                        <i data-lucide="check-circle" class="text-green-500 w-6 h-6 shrink-0 mt-0.5"></i> 
+                        <span><strong>Sofort einsatzbereit</strong> ohne lange Einarbeitung in Ihrem Betrieb.</span>
+                    </li>
+                    <li class="flex gap-4 text-slate-700 items-start">
+                        <i data-lucide="check-circle" class="text-green-500 w-6 h-6 shrink-0 mt-0.5"></i> 
+                        <span><strong>Transparente Kosten</strong> und klare Kommunikation.</span>
+                    </li>
+                    <li class="flex gap-4 text-slate-700 items-start">
+                        <i data-lucide="check-circle" class="text-green-500 w-6 h-6 shrink-0 mt-0.5"></i> 
+                        <span><strong>Jahrelange Erfahrung</strong> in diversen Küchenstilen und Positionen.</span>
+                    </li>
+                </ul>
+             </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-white font-serif font-bold text-xl mb-4">Koch<span class="text-gold-500">.</span>Graz</h3>
+            <p class="text-xs text-slate-600">© 2024 Koch Graz.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

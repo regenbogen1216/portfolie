@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manul KI - Koch Graz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-md py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i data-lucide="chef-hat" class="text-gold-500 w-8 h-8"></i>
+                <span class="text-xl font-serif font-bold text-slate-900">Koch<span class="text-gold-500">.</span>Graz</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-medium hover:text-gold-600 transition">Home</a>
+                <a href="business.html" class="font-medium hover:text-gold-600 transition">Business</a>
+                <a href="private.html" class="font-medium hover:text-gold-600 transition">Privat</a>
+                <a href="about.html" class="font-medium hover:text-gold-600 transition">Über mich</a>
+                <a href="manul-ki.html" class="flex items-center gap-2 bg-sage-600 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-sage-500 transition shadow-md">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Manul KI
+                </a>
+                <a href="contact.html" class="bg-gold-500 text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-gold-600 transition">Kontakt</a>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden text-slate-900 p-2"><i data-lucide="menu" class="w-8 h-8"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl flex-col items-center py-8 space-y-6 md:hidden border-t border-gray-100">
+            <a href="index.html" class="text-xl font-serif font-bold text-slate-800">Home</a>
+            <a href="business.html" class="text-xl font-serif font-bold text-slate-800">Business</a>
+            <a href="private.html" class="text-xl font-serif font-bold text-slate-800">Privat</a>
+            <a href="about.html" class="text-xl font-serif font-bold text-slate-800">Über mich</a>
+            <a href="manul-ki.html" class="text-xl font-bold text-sage-600 flex items-center gap-2"><i data-lucide="sparkles"></i> Manul KI</a>
+            <a href="contact.html" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-20 px-4 max-w-4xl mx-auto w-full flex-grow">
+        
+        <div class="flex flex-col md:flex-row justify-between items-end md:items-center mb-8 gap-4">
+            <div>
+                <h1 class="text-4xl font-serif font-bold text-slate-900">Manul KI</h1>
+                <p class="text-slate-500">Ihr digitaler Küchenassistent</p>
+            </div>
+            <!-- API Key Input -->
+            <div class="flex flex-col items-end gap-1 w-full md:w-auto">
+                <label class="text-xs text-slate-400 uppercase font-bold">Google API Key</label>
+                <input type="password" id="apiKeyInput" placeholder="Hier Key eingeben..." class="border border-slate-300 rounded-lg p-2 text-sm w-full md:w-48 focus:border-sage-500 outline-none bg-white">
+            </div>
+        </div>
+        
+        <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-sage-100 mb-8">
+            <textarea id="promptInput"
+                placeholder="Frage mich nach einem Rezept für Kürbissuppe, wie man Steak brät, oder nach Mengen für 20 Personen..."
+                class="w-full p-4 rounded-xl bg-slate-50 border-2 border-transparent focus:border-sage-500 outline-none h-32 mb-4 resize-none transition"
+            ></textarea>
+            <button onclick="generateAI()" id="generateBtn"
+                class="bg-sage-600 text-white px-8 py-4 rounded-full font-bold hover:bg-sage-500 w-full flex justify-center items-center gap-2 transition shadow-lg hover:-translate-y-0.5">
+                <i data-lucide="sparkles" class="w-5 h-5"></i> KI Fragen
+            </button>
+        </div>
+
+        <div id="resultArea" class="hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+            <h3 class="font-bold text-xl mb-4 flex items-center gap-2 text-slate-900 border-b pb-2"><i data-lucide="chef-hat" class="text-gold-500"></i> Manul antwortet:</h3>
+            <div id="resultText" class="whitespace-pre-wrap text-slate-700 leading-relaxed font-medium"></div>
+        </div>
+        
+        <p class="text-center text-xs text-slate-400 mt-8">Powered by Google Gemini. KI kann Fehler machen.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

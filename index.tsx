@@ -1,0 +1,1 @@
+// Datei deaktiviert. Wir nutzen jetzt reines HTML/JS in index.html

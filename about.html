@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich - Koch Graz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-md py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i data-lucide="chef-hat" class="text-gold-500 w-8 h-8"></i>
+                <span class="text-xl font-serif font-bold text-slate-900">Koch<span class="text-gold-500">.</span>Graz</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-medium hover:text-gold-600 transition">Home</a>
+                <a href="business.html" class="font-medium hover:text-gold-600 transition">Business</a>
+                <a href="private.html" class="font-medium hover:text-gold-600 transition">Privat</a>
+                <a href="about.html" class="font-bold text-gold-600 border-b-2 border-gold-600">Über mich</a>
+                <a href="manul-ki.html" class="flex items-center gap-2 bg-sage-100 text-sage-600 px-4 py-2 rounded-full font-bold text-sm hover:bg-sage-600 hover:text-white transition">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Manul KI
+                </a>
+                <a href="contact.html" class="bg-gold-500 text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-gold-600 transition">Kontakt</a>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden text-slate-900 p-2"><i data-lucide="menu" class="w-8 h-8"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl flex-col items-center py-8 space-y-6 md:hidden border-t border-gray-100">
+            <a href="index.html" class="text-xl font-serif font-bold text-slate-800">Home</a>
+            <a href="business.html" class="text-xl font-serif font-bold text-slate-800">Business</a>
+            <a href="private.html" class="text-xl font-serif font-bold text-slate-800">Privat</a>
+            <a href="about.html" class="text-xl font-serif font-bold text-gold-600">Über mich</a>
+            <a href="manul-ki.html" class="text-xl font-bold text-sage-600 flex items-center gap-2"><i data-lucide="sparkles"></i> Manul KI</a>
+            <a href="contact.html" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-20 px-4 max-w-4xl mx-auto w-full flex-grow">
+        <div class="animate-fade-in-up">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-center mb-12">Leidenschaft trifft Handwerk</h1>
+            
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 text-lg leading-relaxed text-slate-700">
+                <div class="flex justify-center mb-8">
+                    <i data-lucide="award" class="w-16 h-16 text-gold-500"></i>
+                </div>
+                
+                <p class="font-bold text-xl text-slate-900 mb-6 text-center">Vom traditionellen Gasthaus zur modernen Privatküche in Graz.</p>
+                
+                <p class="mb-6">
+                    Meine Reise begann nicht in einer High-Tech Küche, sondern zwischen holzgetäfelten Wänden und dem Duft von echtem steirischen Kernöl. Im ältesten Gasthaus der Region lernte ich, was es bedeutet, Zutaten mit Respekt zu behandeln. Dort absolvierte ich meine Lehre – und verstand früh: <strong>Echtes Handwerk kennt keine Abkürzungen.</strong>
+                </p>
+                
+                <p class="mb-8">
+                    Heute bin ich Ihr Privatkoch in Graz. Ich bringe die Expertise aus der gehobenen Hotellerie und die Bodenständigkeit der steirischen Küche direkt zu Ihnen. Ich liebe es, Gastgeber zu sein und Menschen mit Essen glücklich zu machen.
+                </p>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border-l-4 border-gold-500 italic text-slate-800">
+                    "Gutes Essen braucht kein Sternemenü – es braucht Hingabe, Wissen und den Mut, auf Menschen einzugehen."
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-3 rounded-full font-bold hover:bg-slate-800 transition shadow-lg">
+                        Kennenlernen <i data-lucide="coffee" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-white font-serif font-bold text-xl mb-4">Koch<span class="text-gold-500">.</span>Graz</h3>
+            <p class="text-xs text-slate-600">© 2024 Koch Graz.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
